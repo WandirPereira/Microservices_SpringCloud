@@ -16,7 +16,7 @@ public class SolicitacaoEmissaoCartaoPublisher {
     private final RabbitTemplate rabbitTemplate;
     private final Queue queueEmissaoCartoes;
 
-    public void solicitacaoCartao(DadosSolicitacaoEmissaoCartao dados) throws JsonProcessingException {
+    public void solicitarCartao(DadosSolicitacaoEmissaoCartao dados) throws JsonProcessingException {
         var json = convertIntoJson(dados);
         rabbitTemplate.convertAndSend(queueEmissaoCartoes.getName(), json);
     }

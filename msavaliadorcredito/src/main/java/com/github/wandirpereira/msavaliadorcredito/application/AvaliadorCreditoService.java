@@ -3,9 +3,11 @@ package com.github.wandirpereira.msavaliadorcredito.application;
 
 import com.github.wandirpereira.msavaliadorcredito.application.exceptions.DadosClienteNotFoundException;
 import com.github.wandirpereira.msavaliadorcredito.application.exceptions.ErroComunicacaoMicroservicoException;
+import com.github.wandirpereira.msavaliadorcredito.application.exceptions.ErroSolicitacaoCartaoException;
 import com.github.wandirpereira.msavaliadorcredito.domain.model.*;
 import com.github.wandirpereira.msavaliadorcredito.infra.clients.CartoesResourceClient;
 import com.github.wandirpereira.msavaliadorcredito.infra.clients.ClienteResourceClient;
+import com.github.wandirpereira.msavaliadorcredito.infra.mqueue.SolicitacaoEmissaoCartaoPublisher;
 import feign.FeignException;
 import lombok.RequiredArgsConstructor;
 
@@ -16,6 +18,7 @@ import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 import java.util.List;
+import java.util.UUID;
 import java.util.stream.Collectors;
 
 @Service
@@ -24,6 +27,8 @@ public class AvaliadorCreditoService {
 
     private final ClienteResourceClient clienteResourceClient;
     private final CartoesResourceClient cartoesResourceClient;
+    private final SolicitacaoEmissaoCartaoPublisher emissaoCartaoPublisher;
+
 
     //obter dados cliente - mscliente
     //obter dados dos cartoes - mscartoes
@@ -76,6 +81,16 @@ public class AvaliadorCreditoService {
                 throw new  DadosClienteNotFoundException();
             }
             throw new ErroComunicacaoMicroservicoException(e.getMessage(), status);
+        }
+    }
+
+    public ProtocoloSolicitacaoCartao solicitarEmissaoCartao(DadosSolicitacaoEmissaoCartao dados){
+        try{
+            emissaoCartaoPublisher.solicitarCartao(dados);
+            var protocolo = UUID.randomUUID().toString();
+            return new ProtocoloSolicitacaoCartao(protocolo);
+        }catch (Exception e){
+            throw new ErroSolicitacaoCartaoException(e.getMessage());
         }
     }
 }
