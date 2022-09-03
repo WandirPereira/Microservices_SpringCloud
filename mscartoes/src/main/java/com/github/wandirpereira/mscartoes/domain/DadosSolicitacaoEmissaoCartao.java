@@ -1,9 +1,8 @@
-package com.github.wandirpereira.msavaliadorcredito.domain.model;
+package com.github.wandirpereira.mscartoes.domain;
 
 import lombok.Data;
 
 import java.math.BigDecimal;
-import java.util.function.BiConsumer;
 
 @Data
 public class DadosSolicitacaoEmissaoCartao {
