@@ -8,7 +8,7 @@ spring:
     password: senha@1234
   jpa:
     database-platform: org.hibernate.dialect.MySQLDialect
-   hibernate.ddl-auto: update
+    hibernate.ddl-auto: update
     generate-ddl: true
     show-sql: true
   rabbitmq:
@@ -23,7 +23,7 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka
+      defaultZone: http://eureka-user:12345678@localhost:8761/eureka
   instance:
     instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
 
