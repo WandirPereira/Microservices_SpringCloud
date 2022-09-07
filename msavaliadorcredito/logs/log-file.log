@@ -1,0 +1,55 @@
+2022-09-07 15:37:43.149  INFO 22648 --- [restartedMain] c.g.w.m.MsavaliadorcreditoApplication    : Starting MsavaliadorcreditoApplication using Java 11.0.15 on DESKTOP-1GMQS60 with PID 22648 (C:\Users\wandi\Documents\2022-Curso-Microserviços_DouglasSouza\Microservicos_SpringCloud\msavaliadorcredito\target\classes started by wandi in C:\Users\wandi\Documents\2022-Curso-Microserviços_DouglasSouza\Microservicos_SpringCloud\msavaliadorcredito)
+2022-09-07 15:37:43.159  INFO 22648 --- [restartedMain] c.g.w.m.MsavaliadorcreditoApplication    : No active profile set, falling back to 1 default profile: "default"
+2022-09-07 15:37:43.250  INFO 22648 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-07 15:37:43.251  INFO 22648 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-07 15:37:45.079  INFO 22648 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=11cac046-fe41-3069-9ca6-276a69d2e3ac
+2022-09-07 15:37:46.309  INFO 22648 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2022-09-07 15:37:46.324  INFO 22648 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-09-07 15:37:46.324  INFO 22648 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-07 15:37:46.472  INFO 22648 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-09-07 15:37:46.472  INFO 22648 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3219 ms
+2022-09-07 15:37:47.351  WARN 22648 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-09-07 15:37:47.487  INFO 22648 --- [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'msclientes' URL not provided. Will try picking an instance via load-balancing.
+2022-09-07 15:37:47.665  INFO 22648 --- [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'mscartoes' URL not provided. Will try picking an instance via load-balancing.
+2022-09-07 15:37:53.280  INFO 22648 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2022-09-07 15:37:55.275  INFO 22648 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2022-09-07 15:37:55.288  INFO 22648 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2022-09-07 15:37:55.371  WARN 22648 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-09-07 15:37:55.386  INFO 22648 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoint(s) beneath base path '/actuator'
+2022-09-07 15:37:55.478  INFO 22648 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 53151 (http) with context path ''
+2022-09-07 15:37:55.479  INFO 22648 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 53151
+2022-09-07 15:37:55.487  INFO 22648 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-09-07 15:37:55.609  INFO 22648 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-09-07 15:37:55.617  INFO 22648 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-07 15:37:55.651  INFO 22648 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-09-07 15:37:55.651  INFO 22648 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-09-07 15:37:55.651  INFO 22648 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-09-07 15:37:55.651  INFO 22648 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-09-07 15:37:55.651  INFO 22648 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-09-07 15:37:55.651  INFO 22648 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-09-07 15:37:55.651  INFO 22648 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-09-07 15:37:56.132  INFO 22648 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-09-07 15:37:56.135  INFO 22648 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-09-07 15:37:56.138  INFO 22648 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-09-07 15:37:56.145  INFO 22648 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1662575876144 with initial instances count: 2
+2022-09-07 15:37:56.147  INFO 22648 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MSAVALIADORCREDITO with eureka with status UP
+2022-09-07 15:37:56.148  INFO 22648 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1662575876148, current=UP, previous=STARTING]
+2022-09-07 15:37:56.150  INFO 22648 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSAVALIADORCREDITO/msavaliadorcredito:c055210700e7381173fc73b2121c02a0: registering service...
+2022-09-07 15:37:56.295  INFO 22648 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSAVALIADORCREDITO/msavaliadorcredito:c055210700e7381173fc73b2121c02a0 - registration status: 204
+2022-09-07 15:37:57.836  INFO 22648 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2022-09-07 15:37:57.867  INFO 22648 --- [restartedMain] c.g.w.m.MsavaliadorcreditoApplication    : Started MsavaliadorcreditoApplication in 17.21 seconds (JVM running for 19.022)
+2022-09-07 15:42:55.685  INFO 22648 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-07 15:47:55.694  INFO 22648 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-07 15:52:55.697  INFO 22648 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-07 15:57:03.214  INFO 22648 --- [http-nio-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-07 15:57:03.215  INFO 22648 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-09-07 15:57:03.216  INFO 22648 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-09-07 15:57:46.381  INFO 22648 --- [http-nio-auto-1-exec-8] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2022-09-07 15:57:46.442  INFO 22648 --- [http-nio-auto-1-exec-8] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#187f29f4:0/SimpleConnection@7ac37742 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 51861]
+2022-09-07 15:57:55.701  INFO 22648 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-07 16:02:55.706  INFO 22648 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-07 16:07:55.710  INFO 22648 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-07 16:12:55.722  INFO 22648 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-07 16:17:55.726  INFO 22648 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-07 16:22:55.741  INFO 22648 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-07 16:27:55.743  INFO 22648 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

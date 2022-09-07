@@ -5,6 +5,7 @@ import com.github.wandirpereira.mscartoes.infra.repository.CartaoRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.math.BigDecimal;
 import java.util.List;
 
@@ -14,6 +15,7 @@ public class CartaoService {
 
         private final CartaoRepository cartaoRepository;
 
+        @Transactional
         public  Cartao save(Cartao cartao){
             return cartaoRepository.save(cartao);
         }

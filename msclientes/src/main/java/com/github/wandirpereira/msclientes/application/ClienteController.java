@@ -4,6 +4,8 @@ import com.github.wandirpereira.msclientes.application.representation.ClienteSav
 import com.github.wandirpereira.msclientes.domain.Cliente;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -17,6 +19,7 @@ import java.util.Optional;
 @Slf4j
 public class ClienteController {
 
+    private static  final Logger log2 = LoggerFactory.getLogger(ClienteController.class);
     private final ClienteService clienteService;
 
     @GetMapping
