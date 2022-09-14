@@ -21,19 +21,19 @@ Microservice com Spring Cloud, Eureka, Spring Boot, KeyCloak e RabbitMQ
     * docker run --name eureka_ac -p 8761:8761 --network ac-network wandir/eureka_ac
     
   * Container mscloudgateway:
-    * docker build --tag wandir/mscloudgateway .
-    * docker run --name mscloudgateway_ac --network ac-network -e EUREKA_SERVER=eureka_ac  -e KEYCLOAK_SERVER=keycloak_ac -d wandir/mscloudgateway  
+    * docker build  --build-arg  EUREKA_SERVER=eureka_ac  --build-arg KEYCLOAK_SERVER=keycloak_ac --tag wandir/mscloudgateway .
+    * docker run --name mscloudgateway_ac --network ac-network -d wandir/mscloudgateway  
   
   * Container msclientes:
-    * docker build --tag wandir/msclientes_ac .
-    * docker run --name msclientes_ac --network ac-network -e EUREKA_SERVER=eureka_ac  -e MYSQL_SERVER=mysql_ac -d wandir/msclientes_ac   
+    * docker build --build-arg EUREKA_SERVER=eureka_ac  --build-arg MYSQL_SERVER=mysql_ac --tag wandir/msclientes_ac .
+    * docker run --name msclientes_ac --network ac-network -d wandir/msclientes_ac   
 
   * Container mscartoes:
-    * docker build --tag wandir/mscartoes_ac .
-    * docker run --name mscartoes_ac --network ac-network -e EUREKA_SERVER=eureka_ac  -e MYSQL_SERVER=mysql_ac -e RABBITMQ_SERVER=rabbitmq_ac -d wandir/mscartoes_ac 
+    * docker build --build-arg EUREKA_SERVER=eureka_ac  --build-arg MYSQL_SERVER=mysql_ac --build-arg RABBITMQ_SERVER=rabbitmq_ac --tag wandir/mscartoes_ac .
+    * docker run --name mscartoes_ac --network ac-network -d wandir/mscartoes_ac 
 
   * Container msavaliadorcredito:
-    * docker build --tag wandir/msavaliadorcredito_ac .
-    * docker run --name msavaliadorcredito_ac --network ac-network -e EUREKA_SERVER=eureka_ac -e RABBITMQ_SERVER=rabbitmq_ac -d wandir/msavaliadorcredito_ac    
+    * docker build --build-arg EUREKA_SERVER=eureka_ac --build-arg RABBITMQ_SERVER=rabbitmq_ac --tag wandir/msavaliadorcredito_ac .
+    * docker run --name msavaliadorcredito_ac --network ac-network -d wandir/msavaliadorcredito_ac    
   
 
